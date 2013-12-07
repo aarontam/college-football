@@ -14,6 +14,13 @@ enyo.kind({
 		// for the team logo image
 		logo: function () {
 			return "http://i2.turner.ncaa.com/dr/ncaa/ncaa/release" + this.get("iconURL");
+		},
+		// we create a computed property that will return the team name with their 
+		// ranking, if non-zero
+		nameRank: function () {
+			var rank = parseInt(this.get("teamRank"), 10);
+			if (rank) rank = "(" + rank + ") ";
+			return (rank ? rank : "") + this.get("nameRaw");
 		}
 	}
 });

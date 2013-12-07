@@ -12,9 +12,9 @@ body { font-family: 'Quicksand', sans-serif; }
 	.banner { -webkit-transform: rotate(-45deg); left: -50px; top: 15px; } .team-name { -webkit-transform: rotate(-90deg); left: -54px; top: 52px; } }
 .home-team { top: 0; right: 0; bottom: 0; .logo { right: 25px; } .team-score { right: 100%; margin-right: -50px; text-align: left; } 
 	.banner { -webkit-transform: rotate(45deg); right: -50px; top: 14px; } .team-name { -webkit-transform: rotate(90deg); right: -50px; top: 50px; } }
-.team { box-sizing: border-box; width: 155px; height: 120px; &> * { position: absolute; } &.winner { .banner { display: block; } } }
+.team { box-sizing: border-box; width: 155px; height: 120px; &> * { position: absolute; } &.winner { .banner { display: block; opacity: 0.5; } .team-score { font-weight: bold; color: #000;} } }
 .logo { height: 80px; width: 80px; top: 50%; margin-top: -40px; }
-.team-score { width: 30px; font-size: 24px; line-height: 24px; top: 50%; margin-top: -12px; }
+.team-score { width: 30px; font-size: 24px; line-height: 24px; top: 50%; margin-top: -12px; color: #555; }
 .at { width: 20px; left: 50%; top: 50%; font-size: 24px; line-height: 24px; margin-top: -12px; margin-left: -10px; }
 .banner { width: 150px; background: #97E0FF; position: absolute; text-align: center; top: 20px; display: none; }
 .team-name { position: absolute; color: #fff; text-shadow: 0px 0px 3px #fff; background: #222; width: 120px; text-align: center; font-size: 12px; }

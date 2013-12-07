@@ -10,7 +10,8 @@ enyo.kind({
 		// so we found the current season week and use that to complete our
 		// scores request, the request requires a leading `0` if it is a single digit
 		// value
-		return enyo.format(this.url, ("0" + this.app.get("week")).slice(-2));
+		//return enyo.format(this.url, ("0" + this.app.get("week")).slice(-2));
+		return enyo.format(this.url, ("0" + this.app.getWeek()).slice(-2));
 	},
 	parse: function (data) {
 		// the data comes back as an object with a property that is the

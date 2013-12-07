@@ -1,4 +1,6 @@
 enyo.depends(
+	// Onyx UI library
+	"$lib/onyx",
 	"Models",
 	"Style",
 	"Views",

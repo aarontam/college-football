@@ -14,7 +14,11 @@ enyo.kind({
 		{from: ".model.currentScore", to: ".$.score.content"},
 		// binding from a computed property...
 		{from: ".model.won", to: ".winner"},
-		{from: ".model.nameRaw", to: ".$.teamName.content"}
+		// binding from a computed property...
+		{from: ".model.nameRank", to: ".$.teamName.content"},
+		{from: ".model.color", to: ".$.teamName.style", transform: function(color, dir, binding) {
+			return "background-color:" + color;
+		}}
 	],
 	// when the computed property for `won`, bound to our local property
 	// `winner` is set, this method will detect the change and fire which

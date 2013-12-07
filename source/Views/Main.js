@@ -6,7 +6,9 @@ enyo.kind({
 	components: [
 		{classes: "game-week", components: [
 			{tag: "span", content: "NCAAF Week "},
-			{tag: "span", name: "week"}	
+			//{tag: "span", name: "week"}
+			{kind: enyo.Input, name: "week"},
+			{kind: enyo.Button, name: "buttonWeek", content: "go", ontap: "buttonWeekTapped"}
 		]},
 		{kind: enyo.DataRepeater, components: [
 			{classes: "game-day", components: [
@@ -36,6 +38,9 @@ enyo.kind({
 		], controller: ".app.controllers.scoreboard"}
 	],
 	bindings: [
-		{from: ".app.week", to: ".$.week.content"}
-	]
+		{from: ".app.week", to: ".$.week.value", oneWay: false}
+	],
+	buttonWeekTapped: function(inSender, inEvent) {
+		this.app.update();
+	}
 });
